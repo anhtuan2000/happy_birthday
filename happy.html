@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Sinh Nhật Bùi Thúy Yên!</title>
+    <style>
+        /* CSS */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            color: #e91e63;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #d81b60;
+        }
+
+        #hiddenMessage {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #e91e63;
+            display: none;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .image-gallery {
+            display: none; /* Ẩn gallery ban đầu */
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin: 10px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Hiệu ứng bong bóng */
+        .bubbles {
+            position: absolute;
+            bottom: -100px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            pointer-events: none;
+        }
+
+        .bubbles span {
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: bubble 10s linear infinite;
+            animation-duration: calc(125s / var(--i));
+        }
+
+        @keyframes bubble {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hiệu ứng bong bóng -->
+    <div class="bubbles">
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:24;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:23;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+    </div>
+
+    <!-- Nội dung chính -->
+    <div class="container">
+        <h1>Chúc Mừng Sinh Nhật Bùi Thúy Yên!</h1>
+        <p>
+            Chúc mừng sinh nhật người yêu của anh, Bùi Thúy Yên! 🎉🎂💖<br><br>
+            Hôm nay là một ngày thật đặc biệt, ngày mà em chào đời và mang đến cho thế giới này một thiên thần tuyệt vời. Anh cảm thấy thật may mắn khi được gặp em, được yêu em và được cùng em viết nên những câu chuyện đẹp trong cuộc sống này.<br><br>
+            Chúc em luôn xinh đẹp, rạng ngời và tràn đầy năng lượng. Mong em luôn giữ được nụ cười tươi tắn trên môi, bởi vì nụ cười của em là ánh sáng làm bừng sáng cả ngày của anh.<br><br>
+            Chúc em luôn mạnh mẽ, tự tin và thành công trong mọi việc. Dù có khó khăn hay thử thách nào phía trước, anh luôn ở đây để đồng hành cùng em, chia sẻ và yêu thương em nhiều hơn nữa.<br><br>
+            Cảm ơn em vì đã đến bên anh, mang đến cho anh những niềm vui và hạnh phúc không thể đong đếm được. Anh yêu em nhiều lắm, và anh mong rằng chúng ta sẽ cùng nhau đi qua thật nhiều mùa sinh nhật nữa trong tương lai.<br><br>
+            Một lần nữa, chúc mừng sinh nhật em yêu! 💖🎉🎂
+        </p>
+        <button onclick="showGallery()">Nhấn vào đây!</button>
+        <p id="hiddenMessage">🎉🎂💖 Chúc em mãi xinh đẹp và hạnh phúc! 💖🎂🎉</p>
+
+        <!-- Phần gallery ảnh -->
+        <div class="image-gallery" id="imageGallery">
+            <img src="anh1.jpg" alt="Ảnh của chúng tôi 1">
+            <img src="anh2.jpg" alt="Ảnh của chúng tôi 2">
+            <img src="anh3.jpg" alt="Ảnh của chúng tôi 3">
+        </div>
+    </div>
+
+    <script>
+        // JavaScript
+        function showGallery() {
+            // Hiển thị thông điệp
+            document.getElementById('hiddenMessage').style.display = 'block';
+            // Hiển thị gallery ảnh
+            document.getElementById('imageGallery').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
